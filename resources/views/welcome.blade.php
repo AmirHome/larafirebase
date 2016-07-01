@@ -63,41 +63,42 @@
 @endsection
 
 @section('content')
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-                <a href="{{ url('/language/tr') }}">Türkçe</a> | <a href="{{ url('/language/en') }}">English</a>
-                {{ App::getLocale()}}
-                {{ trans('general.title') }}
+<div class="container">
 
-                <pre>{{ session('version') }}</pre>
-            </div>
+    <div class="content">
+        <div class="title">Laravel 5</div>
+        <a href="{{ url('/language/tr') }}">Türkçe</a> | <a href="{{ url('/language/en') }}">English</a>
+        {{ App::getLocale()}}
+        {{ trans('general.title') }}
+
+        <pre>{{ session('version') }}</pre>
+    </div>
 
 
-<h1>Create task</h1>
-<input type="text" v-model="task" placeholder="Task" />
-<a @click="createTodo()">Save</a>
+	<h1>Create task</h1>
+	<input type="text" v-model="task" placeholder="Task" />
+	<a @click="createTodo()">Save</a>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Done</th>
-        </tr>
-    </thead>
-    <tbody>
-        <template v-for="todo in todos">
-            <tr>
-                <td>
-                    @{{todo.task}}
-                </td>
-                <td>
-                    <input type="checkbox" v-model="todo.is_done" />
-                </td>
-            </tr>
-        </template>
-    </tbody>
-</table>
+	<table class="table table-bordered">
+	    <thead>
+	        <tr>
+	            <th>Task</th>
+	            <th>Done</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <template v-for="todo in todos">
+	            <tr>
+	                <td>
+	                    @{{todo.task}}
+	                </td>
+	                <td>
+	                    <input type="checkbox" v-model="todo.is_done" />
+	                </td>
+	            </tr>
+	        </template>
+	    </tbody>
+	</table>
 
-        </div>
+</div>
 @endsection
