@@ -49,7 +49,7 @@
                 var self = this;
 
                 // For the sake of simplicity, I'm using jQuery here
-                $.post('../todo', {
+                $.post('./todo', {
                     _token: '{!! csrf_token() !!}',
                     task: self.task,
                     is_done: false

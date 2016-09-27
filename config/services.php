@@ -36,11 +36,11 @@ return [
     ],
 
     'firebase' => [
-        'api_key' => 'AIzaSyC5_hKZlfjSjbwDJl83_H0AoiTNT43JnuA',
-        'auth_domain' => 'myweb-f88d4.firebaseapp.com',
-        'database_url' => 'https://myweb-f88d4.firebaseio.com',
-        'secret' => 'WNMtAL9rVrhqHWG3oUf8dUxNGUKCE7PbOHEhoicK',
-        'storage_bucket' => '',
+        'api_key' => env('FIREBASE_API_KEY'),
+        'auth_domain' => env('FIREBASE_AUTH_DOMAIN'),
+        'database_url' => env('FIREBASE_DB_URL'),
+        'secret' => env('FIREBASE_SECRET'),
+        'storage_bucket' => env('FIREBASE_STORAGE_BUCKET'),
     ],
 
 ];
